@@ -7,7 +7,7 @@ const data = require("./models/schema")
 const app = express()
 app.use(cors());
 app.use(compression());
-const port = 3001 || process.env.PORT
+const port = process.env.PORT || 3001 
 
 mongoose.connect("mongodb+srv://zaindiv:Zain007abd@cluster0.32r5dqe.mongodb.net/all-data?retryWrites=true&w=majority")
 
