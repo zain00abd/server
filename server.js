@@ -1,10 +1,12 @@
 const express = require("express")
 const cors = require("cors")
+const compression = require("compression")
 const mongoose = require("mongoose")
 const data = require("./models/schema")
 
 const app = express()
 app.use(cors());
+app.use(compression());
 const port = 3001 || process.env.PORT
 
 mongoose.connect("mongodb+srv://zaindiv:Zain007abd@cluster0.32r5dqe.mongodb.net/all-data?retryWrites=true&w=majority")
